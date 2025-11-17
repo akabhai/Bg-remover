@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>U²Net Background Remover</title>
+
+    <!-- ONNX Runtime Web -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #inputImage, #outputImage { max-width: 300px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>U²Net Background Remover</h2>
+
+    <input type="file" id="upload" accept="image/*">
+
+    <div>
+        <h3>Original</h3>
+        <img id="inputImage">
+    </div>
+
+    <div>
+        <h3>Output Mask</h3>
+        <canvas id="maskCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
